@@ -1,0 +1,56 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: gray;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 50px;
+    transform: translateX(-500px);
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    background: #0056b3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Проста анімація при наведенні */
+header nav ul li a:hover {
+    background: #004494; /* Темніший фон при наведенні */
+    transform: translateY(-3px); /* Піднімаємо на 3px */
+    text-decoration: none; /* Забираємо ризику під час наведенні */
+}
+
+/* Додаємо анімацію для логотипу */
+.logo img:hover {
+    transform: scale(1.1); /* Збільшення логотипу при наведенні */
+    transition: transform 0.3s ease; /* Анімація переходу для логотипу */
+}

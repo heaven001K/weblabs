@@ -1,0 +1,180 @@
+/* catalog.css або itemPage.css */
+.item-page {
+    padding: 20px;
+    font-family: 'Roboto', sans-serif; /* Використовуємо новий шрифт */
+    color: #333;
+    background-color: #f5f5f5; /* Світло-сірий фон для контрасту */
+    border-radius: 8px; /* Краї для покращення вигляду */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тінь для глибини */
+}
+
+.item-page-content {
+    display: flex;
+    align-items: flex-start; /* Вирівнює елементи по верхньому краю */
+    margin-top: 40px;
+    transition: transform 0.3s ease; /* Додаємо анімацію */
+}
+
+.item-page-content:hover {
+    transform: scale(1.02); /* Невелике збільшення при наведенні */
+}
+
+.item-image {
+    width: 300px; /* Встановіть потрібну ширину для зображення */
+    border-radius: 8px;
+    margin-right: 20px; /* Відстань між зображенням і текстом */
+    transition: transform 0.3s ease; /* Додаємо анімацію */
+}
+
+.item-image:hover {
+    transform: scale(1.05); /* Збільшення зображення при наведенні */
+}
+
+.item-details {
+    flex: 1; /* Дозволяє тексту займати доступний простір */
+}
+
+.item-details h1 {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 10px;
+    transition: color 0.3s ease; /* Додаємо анімацію */
+}
+
+.item-details h1:hover {
+    color: #0056b3; /* Темніший колір заголовка при наведенні */
+}
+
+.item-details p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    line-height: 1.5; /* Збільшений інтервал між рядками */
+}
+
+/* Загальні стилі для кнопок */
+.view-details-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Додаємо анімацію */
+}
+
+.view-details-button:hover {
+    background-color: #0056b3; /* Темніший колір кнопки при наведенні */
+    transform: translateY(-2px); /* Підняття кнопки при наведенні */
+}
+
+p {
+    max-width: 600px;
+}
+
+.item-price{
+     {
+        font-size: 3em; /* Зробити ціну помітнішою */
+        color: #007bff; /* Колір для ціни */
+        margin-top: 10px; /* Відстань між описом і ціною */
+    }
+}
+
+.item-price p {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.characteristics-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.characteristics-list {
+    margin-top: 10px;
+}
+
+.characteristic-item {
+    margin: 5px 0;
+}
+
+.buttons-container {
+    margin-top: 10px; /* Відстань від опису */
+}
+
+.countable-button,
+.selectable-button {
+    background-color: #28a745; /* Зелений колір */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px; /* Відстань між кнопками */
+}
+
+.selectable-button {
+    background-color: #007bff; /* Синій колір */
+}
+
+.selectable-list {
+    margin-top: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.selectable-item {
+    cursor: pointer;
+    padding: 5px;
+}
+
+.selectable-item:hover {
+    background-color: #e2e6ea; /* Зміна фону при наведенні */
+}
+
+.buttons-container {
+    margin-top: 10px; /* Відстань від опису */
+}
+
+.countable-button,
+.selectable-button {
+    background-color: #28a745; /* Зелений колір */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px; /* Відстань між кнопками */
+}
+
+.selectable-button {
+    background-color: #17a2b8; /* Бірюзовий колір */
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end; /* Вирівнює кнопки вправо */
+    margin-top: 20px; /* Відстань віднизу */
+}
+
+.go-back-button,
+.add-to-cart-button {
+    background-color: #17a2b8; /* Бірюзовий колір */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px; /* Відстань між кнопками */
+}
+
+.add-to-cart-button {
+    background-color: #28a745; /* Зелений колір */
+}
+

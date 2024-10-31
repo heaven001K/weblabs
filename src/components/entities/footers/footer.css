@@ -1,0 +1,16 @@
+footer {
+    background-color: gray; /* Фоновий колір футера */
+    color: white; /* Колір тексту */
+    text-align: center; /* Вирівнювання тексту по центру */
+    position: relative; /* Для позиціювання */
+    bottom: 0; /* Вирівнюємо футер до низу */
+    width: 100%; /* Ширина футера */
+    height: 60px; /* Висота футера */
+    display: flex; /* Використання Flexbox для вирівнювання */
+    justify-content: center; /* Центруємо вміст по горизонталі */
+    align-items: center; /* Центруємо вміст по вертикалі */
+}
+
+footer p {
+    margin: 0; /* Прибираємо відступи у параграфа */
+}

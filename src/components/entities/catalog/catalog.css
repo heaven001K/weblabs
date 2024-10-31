@@ -1,0 +1,134 @@
+.catalog {
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.airplane-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.airplane-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Вирівнювання ціни внизу картки */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 35px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    min-height: 350px; /* Додаємо мінімальну висоту картки */
+}
+
+.airplane-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.airplane-image {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.airplane-description {
+    flex-grow: 1; /* Опис розширюється, займаючи доступний простір */
+    margin: 10px 0;
+}
+
+.airplane-price {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.filter-search-container {
+    display: flex;
+    align-items: center; /* Вирівнює елементи по вертикалі */
+    justify-content: flex-start; /* Вирівнює елементи до лівого краю */
+    margin-left: 40px;
+}
+
+.filter-container {
+    height: 50px;
+    display: flex;
+    gap: 10px; /* Проміжок між елементами */
+    margin-right: 10px; /* Зменшити відступ між фільтрами і полем пошуку */
+    justify-content: flex-start; /* Вирівнювання фільтрів вліво */
+    margin-left : 5px; /* Відстань між заголовком та фільтрами */
+
+}
+
+.filter-container select,
+.filter-container button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-container select:hover,
+.filter-container button:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-container button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+}
+
+.filter-container button:hover {
+    background-color: #0056b3;
+}
+
+h1 {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    height: 30px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 200px; /* Задайте ширину для поля пошуку */
+    margin-left: 300px;
+}
+
+.view-details-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px; /* Відступ знизу для кнопки */
+    transition: background-color 0.3s ease;
+}
+
+.view-details-button:hover {
+    background-color: #0056b3;
+}

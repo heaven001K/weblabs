@@ -1,38 +1,31 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
+  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh; /* Займає всю висоту вікна */
 }
 
-.App-link {
-  color: #61dafb;
+.articles-section {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px 0;
+  flex: 1; /* Дозволяє секції заповнити все доступне місце */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.articles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .articles-grid {
+    grid-template-columns: 1fr 1fr;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.footer-container {
+  margin-top: auto; /* Відступ для футера */
+  width: 100%; /* Ширина футера */
 }
