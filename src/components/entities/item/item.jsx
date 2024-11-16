@@ -1,12 +1,12 @@
-// src/components/entities/itemPage/itemPage.jsx
 import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom'; // Заміна useHistory на useNavigate
+import { useParams, useNavigate } from 'react-router-dom';
 import plane1 from '../../../assets/airplanes/1.jpg';
 import plane2 from '../../../assets/airplanes/2.jpeg';
 import plane3 from '../../../assets/airplanes/3.jpg';
 import './item.css';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../redux/redux'; // Упевніться, що `addItem` експортується коректно
 
-// Масив літаків
 const airplanes = [
     {
         image: plane1,
@@ -47,9 +47,10 @@ const airplanes = [
 ];
 
 const ItemPage = () => {
-    const { name } = useParams(); // Отримання параметра з URL
-    const airplane = airplanes.find(plane => plane.name === name); // Знайти літак за ім'ям
-    const navigate = useNavigate(); // Використання useNavigate для переходу назад
+    const { name } = useParams();
+    const airplane = airplanes.find(plane => plane.name === name);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const [showCharacteristics, setShowCharacteristics] = useState(false);
     const [showSelectable, setShowSelectable] = useState(false);
@@ -59,11 +60,11 @@ const ItemPage = () => {
     }
 
     const handleGoBack = () => {
-        navigate('/catalog'); // Повернення до каталогу літаків
+        navigate('/catalog');
     };
 
     const handleAddToCart = () => {
-        // Тут ви можете додати логіку для додавання літака до кошика
+        dispatch(addItem(airplane));
         alert(`Літак ${airplane.name} додано до кошика!`);
     };
 

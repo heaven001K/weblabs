@@ -12,7 +12,7 @@ const Header = () => {
                 <ul>
                     <li><Link to="/">Home</Link></li> {/* Зміна на Link */}
                     <li><Link to="/catalog">Catalog</Link></li> {/* Зміна на Link */}
-                    <li><a href="#footer">Contacts</a></li> {/* Можна залишити як є, якщо це прокрутка */}
+                    <li><Link to="/cart">Кошик</Link></li> {/* Можна залишити як є, якщо це прокрутка */}
                 </ul>
             </nav>
         </header>

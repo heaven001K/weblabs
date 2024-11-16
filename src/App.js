@@ -7,6 +7,8 @@ import Article from './components/entities/articles/article';
 import Footer from './components/entities/footers/footer';
 import Catalog from './components/entities/catalog/catalog';
 import ItemPage from './components/entities/item/item';
+import CartPage from './components/entities/cartPage/cartPage';
+
 import './App.css';
 
 const App = () => {
@@ -58,6 +60,8 @@ const App = () => {
                     />
                     <Route path="/catalog" element={<Catalog />} />
                     <Route path="/item/:name" element={<ItemPage />} />
+                    <Route path="/cart" element={<CartPage />} />
+
                 </Routes>
                 <div className="footer-container">
                     <Footer />
