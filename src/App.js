@@ -8,8 +8,12 @@ import Footer from './components/entities/footers/footer';
 import Catalog from './components/entities/catalog/catalog';
 import ItemPage from './components/entities/item/item';
 import CartPage from './components/entities/cartPage/cartPage';
-
 import './App.css';
+import Checkout from "./components/entities/checkout/checkout";
+import Success from "./components/entities/succes/succes";
+import Login from './components/entities/login/login';
+import Registration from './components/entities/registration/registration';
+import ProtectedRoute from './components/entities/protectedroute/protectedroute';
 
 const App = () => {
     const articles = [
@@ -24,7 +28,7 @@ const App = () => {
     const [visibleArticles, setVisibleArticles] = useState(2); // Стан для кількості видимих статей
 
     const handleShowMore = () => {
-        setVisibleArticles(prev => prev + 2); // Збільшуємо кількість видимих статей на 2
+        setVisibleArticles((prev) => prev + 2); // Збільшуємо кількість видимих статей на 2
     };
 
     return (
@@ -32,6 +36,7 @@ const App = () => {
             <div className="app-container">
                 <Header />
                 <Routes>
+                    {/* Головна сторінка */}
                     <Route
                         path="/"
                         element={
@@ -45,7 +50,7 @@ const App = () => {
                                                     <Article key={index} title={article.title} content={article.content} />
                                                 ))}
                                             </div>
-                                            {visibleArticles < articles.length && ( // Показуємо кнопку, якщо є ще статті
+                                            {visibleArticles < articles.length && (
                                                 <div className="show-more">
                                                     <button className="plane-catalog-button" onClick={handleShowMore}>
                                                         Show More
@@ -58,10 +63,62 @@ const App = () => {
                             </>
                         }
                     />
-                    <Route path="/catalog" element={<Catalog />} />
-                    <Route path="/item/:name" element={<ItemPage />} />
-                    <Route path="/cart" element={<CartPage />} />
 
+                    {/* Сторінка каталогу */}
+                    <Route
+                        path="/catalog"
+                        element={
+                            <ProtectedRoute>
+                                <Catalog />
+                            </ProtectedRoute>
+                        }
+                    />
+
+                    {/* Сторінка товару */}
+                    <Route
+                        path="/item/:name"
+                        element={
+                            <ProtectedRoute>
+                                <ItemPage />
+                            </ProtectedRoute>
+                        }
+                    />
+
+                    {/* Сторінка кошика */}
+                    <Route
+                        path="/cart"
+                        element={
+                            <ProtectedRoute>
+                                <CartPage />
+                            </ProtectedRoute>
+                        }
+                    />
+
+                    {/* Сторінка Checkout */}
+                    <Route
+                        path="/checkout"
+                        element={
+                            <ProtectedRoute>
+                                <Checkout />
+                            </ProtectedRoute>
+                        }
+                    />
+
+                    {/* Сторінка Success */}
+                    <Route
+                        path="/success"
+                        element={
+                            <ProtectedRoute>
+                                <Success />
+                            </ProtectedRoute>
+                        }
+                    />
+
+                    {/* Сторінка входу */}
+                    <Route path="/login" element={<Login />} />
+
+                    {/* Сторінка реєстрації */}
+                    <Route path="/register" element={<Registration />} />
                 </Routes>
                 <div className="footer-container">
                     <Footer />

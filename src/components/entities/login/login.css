@@ -1,0 +1,31 @@
+.auth-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.register-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+.password-container {
+    display: flex;
+    align-items: center;
+}
+
+.password-toggle-button {
+    margin-left: 8px;
+    background-color: transparent;
+    border: none;
+    color: #007BFF;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.password-toggle-button:hover {
+    text-decoration: underline;
+}

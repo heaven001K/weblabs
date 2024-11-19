@@ -54,3 +54,57 @@ header nav ul li a:hover {
     transform: scale(1.1); /* Збільшення логотипу при наведенні */
     transition: transform 0.3s ease; /* Анімація переходу для логотипу */
 }
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Вирівнює вправо */
+}
+
+.sign-in-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.sign-in-button:hover {
+    background-color: #0056b3;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Вирівнює вправо */
+}
+
+.sign-in-button,
+.sign-up-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px; /* Додаємо відступ між кнопками */
+    transition: background-color 0.3s ease;
+}
+
+.sign-in-button:hover,
+.sign-up-button:hover {
+    background-color: #0056b3;
+}
+
+.sign-up-button {
+    background-color: #28a745; /* Змінюємо колір для кнопки реєстрації */
+}
+
+.sign-up-button:hover {
+    background-color: #218838;
+}
+
